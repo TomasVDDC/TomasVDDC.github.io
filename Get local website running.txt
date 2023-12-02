@@ -1,0 +1,15 @@
+Get website running locally.
+
+-git clone the repo TomasVDDC.github.io
+-install ruby https://rubyinstaller.org/   also take the dev options this will also install "gem" on your device
+- check with ruby -v and gem -v
+-GCC and Make  install https://sourceforge.net/projects/mingw/ and in the installer manager choose "MinGW32-base Package." ,"MinGW32-gcc-g++ Package." and "msys-base"
+-Add the path to your environment variables. copy the path from the bin folder  C:>MinGW>bin
+-in the bin folder rename mingw32-make.exe to make.exe
+-check everything is working with gcc -v,g++ -v, and make -v 
+-install the bundler "gem install bundler"
+-now "cd" to the directory where the repo was cloned
+- run "bundle install"
+- try to run: bundle exec jekyll serve --baseurl=""  
+- if you see an error do "bundle add tzinfo" and "bundle add tzinfo-data"
+- try to run: bundle exec jekyll serve --baseurl=""   and pray haha
