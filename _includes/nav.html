@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
+
+
+<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular" style="padding-bottom: 5px;padding-top: 5px;">
 
   {%- if site.title-img -%}
     <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
@@ -50,9 +52,9 @@
 
   {% if site.avatar and page.show-avatar != false %}
     <div class="avatar-container">
-      <div class="avatar-img-border">
+      <div class="avatar-img-border" style="margin-bottom: -30px" >
         <a href="{{ '/' | absolute_url }}">
-          <img alt="Navigation bar avatar" class="avatar-img" src="{{ site.avatar | relative_url }}" />
+          <img alt="Navigation bar avatar" class="avatar-img"  src="{{ site.avatar | relative_url }}" />
         </a>
       </div>
     </div>
