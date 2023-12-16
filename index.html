@@ -7,6 +7,13 @@ subtitle:
 <div style="background-color: white; padding: 0 70px">
 	<!-- component for the title -->
 
+	<head>
+		<script
+			src="https://cdn.plot.ly/plotly-2.27.0.min.js"
+			charset="utf-8"
+		></script>
+	</head>
+
 	<style>
 		h2 {
 			margin-top: 70px;
@@ -161,13 +168,31 @@ subtitle:
 	<h3>Let's look at the data</h3>
 
 	<div>
-		To compare the performance of high-budget and low-budget films, we will
-		consider the multiplier between the budget and the boxoffice. A 10x
-		multiplier would imply that every dollar spent on the movie resulted in 10
-		dollars in box office revenue.
+		After cleaning and filtering the data, we are left with 1701 movies. 855
+		high budget movies and 846 low budget movies. Given the definition of
+		performance above let take a look at the distribution of the multiplier for
+		both high and low budget movies.
 	</div>
 
-	{% include plots/example_chart.html %}
+	<img
+		src="./assets/img/LowHighComparaison.png"
+		style="width: 100%; max-width: 800px; margin: 50px auto; display: block"
+	/>
+
+	<div>
+		Low-budget movies, in blue, typically yield more modest returns, but a
+		select few outperform expectations with high profitability. High-budget
+		films, in orange, show more consistent returns but fewer breakout financial
+		successes.
+	</div>
+
+	<h4>Movie Genre</h4>
+
+	{% include plots/pie_genre.html %} {% include
+	plots/genre_influence_multiplier.html %}
+
+	<h4>Movie Runtime</h4>
+
 	<div>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
@@ -184,7 +209,26 @@ subtitle:
 		nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
 		convallis.
 	</div>
-	<h2>Question 3</h2>
+
+	<h4>Movie Actor Age</h4>
+
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
+		pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
+		massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
+		risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
+		eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
+		consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
+		neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
+		tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
+		sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
+		et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
+		ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
+		nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
+		convallis.
+	</div>
+	<h2>What does our statistical analysis tell us?</h2>
 	{% include plots/example_chart_no_plotlyjs.html %}
 	<div>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -202,7 +246,7 @@ subtitle:
 		nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
 		convallis.
 	</div>
-	<h2>Question 4</h2>
+	<h2>Conclusion</h2>
 	<div>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
