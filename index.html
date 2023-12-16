@@ -5,89 +5,218 @@ subtitle:
 ---
 
 <div style="background-color: white; padding: 0 70px">
-  <!-- component for the title -->
+	<!-- component for the title -->
 
-  <div class="row" style="display: flex; justify-content: center">
-    <div style="text-align: center">
-      <div class="page-heading">
-        <h1>Budget Battles</h1>
-        <hr class="small" />
-        <span class="page-subheading"
-          >Maximizing Returns in Filmmaking Odyssey</span
-        >
-      </div>
-    </div>
-  </div>
+	<style>
+		h2 {
+			margin-top: 70px;
+			margin-bottom: 25px;
+		}
 
-  <h2>Question 1</h2>
-  
-  <div>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
-    pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
-    massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
-    risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
-    eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
-    consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
-    neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
-    tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
-    sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
-    et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
-    ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
-    nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
-    convallis.
-  </div>
-  <h2>Question 2</h2>
-  {% include plots/example_chart.html %}
-  <div>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
-    pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
-    massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
-    risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
-    eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
-    consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
-    neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
-    tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
-    sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
-    et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
-    ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
-    nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
-    convallis.
-  </div>
-  <h2>Question 3</h2>
-  {% include plots/example_chart_no_plotlyjs.html %}
-  <div>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
-    pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
-    massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
-    risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
-    eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
-    consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
-    neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
-    tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
-    sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
-    et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
-    ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
-    nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
-    convallis.
-  </div>
-  <h2>Question 4</h2>
-  <div>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
-    pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
-    massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
-    risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
-    eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
-    consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
-    neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
-    tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
-    sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
-    et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
-    ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
-    nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
-    convallis.
-  </div>
+		h3 {
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+		.scene {
+			margin-bottom: 20px;
+			font-style: italic;
+		}
+		.character {
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+		.dialogue {
+			margin-left: 20px;
+			margin-bottom: 25px;
+			flex: content;
+		}
+	</style>
+
+	<div class="row" style="display: flex; justify-content: center">
+		<div style="text-align: center">
+			<div class="page-heading">
+				<h1>Budget Battles</h1>
+				<hr class="small" />
+				<span class="page-subheading"
+					>Maximizing Returns in Filmmaking Odyssey</span
+				>
+			</div>
+		</div>
+	</div>
+
+	<h2>Movie Bet: John and Bob's Challenge</h2>
+
+	<img
+		src="./assets/img/PubImage.png"
+		alt="John and Bob"
+		style="width: 100%; max-width: 800px; margin: 50px auto; display: block"
+	/>
+
+	<div class="scene">
+		[Scene: A bustling pub. John, a suave and affluent man in his 30s, and Bob,
+		an inventive, relaxed guy in his 50s, are deep in conversation over beers.]
+	</div>
+
+	<div class="dialogue">
+		<div class="character">John: (raising his glass)</div>
+		"Here's to our next ventures, Bob! I'm already envisioning my next
+		blockbuster."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">Bob: (smiling)</div>
+		"Cheers, John! But you know, I've been thinking... I want to go a different
+		route this time."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">John: (curiously)</div>
+		"How so?"
+	</div>
+
+	<div class="dialogue">
+		<div class="character">Bob:</div>
+		"I'm convinced I can create a remarkable movie with a minimal budget. It's
+		not just about lavish sets and star-studded casts."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">John: (laughs)</div>
+		"Bob, in our world, bigger is better. More money means better technology,
+		A-list stars, and top-notch marketing. That's how you captivate audiences
+		globally."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">Bob: (earnestly)</div>
+		"That's one way to see it. But consider this: lower budget films are often
+		more story-driven. They're raw, authentic, and have a higher profit margin.
+		A small investment can lead to big returns if the story resonates."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">John:</div>
+		"Sure, a few small films have made it big, but they're the exception. You
+		need scale, spectacle, and a sizable marketing budget to really make a
+		splash. It's about creating a cultural phenomenon."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">Bob:</div>
+		"But there's beauty in simplicity, John. A low-budget movie forces you to be
+		creative. It's not about how much you spend, but how you use what you have.
+		And when such a film succeeds, the return on investment is phenomenal."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">John: (pondering)</div>
+		"Hmm... It's an interesting perspective. How about this? Let's make a
+		friendly bet. I say my high-budget extravaganza will outperform your indie
+		flick in both profits and popularity."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">Bob: (determined)</div>
+		"You're on, John. This is the perfect chance to prove that great
+		storytelling doesn't need a big wallet. Loser organizes and pays for the
+		winner's movie premiere party?"
+	</div>
+
+	<div class="dialogue">
+		<div class="character">John: (excited)</div>
+		"That's a deal! To our movies and this challenge! May the best approach
+		win."
+	</div>
+
+	<div class="dialogue">
+		<div class="character">Bob:</div>
+		"To creativity and success!"
+	</div>
+
+	<div class="scene">They clink their glasses, sealing their bet.</div>
+
+	<h2>The Data Driven Approach to John and Bob's Challenge</h2>
+
+	<div>
+		To answer which approach is better, we will look at the data from the films
+		in the TMBD database. The TMBD database contains information on over 45,000
+		movies, including budget, revenue, and popularity. We will use this data to
+		compare the performance of high-budget and low-budget films.
+	</div>
+
+	<h3>Defining Performance</h3>
+
+	<div>
+		To compare the performance of high-budget and low-budget films, we will
+		consider the multiplier between the budget and the boxoffice. A 10x
+		multiplier would imply that every dollar spent on the movie resulted in 10
+		dollars in box office revenue.
+	</div>
+
+	<h3>Let's look at the data</h3>
+
+	<div>
+		To compare the performance of high-budget and low-budget films, we will
+		consider the multiplier between the budget and the boxoffice. A 10x
+		multiplier would imply that every dollar spent on the movie resulted in 10
+		dollars in box office revenue.
+	</div>
+
+	{% include plots/example_chart.html %}
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
+		pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
+		massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
+		risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
+		eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
+		consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
+		neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
+		tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
+		sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
+		et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
+		ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
+		nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
+		convallis.
+	</div>
+	<h2>Question 3</h2>
+	{% include plots/example_chart_no_plotlyjs.html %}
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
+		pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
+		massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
+		risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
+		eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
+		consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
+		neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
+		tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
+		sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
+		et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
+		ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
+		nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
+		convallis.
+	</div>
+	<h2>Question 4</h2>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
+		pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
+		massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
+		risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
+		eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
+		consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
+		neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
+		tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
+		sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
+		et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
+		ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
+		nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
+		convallis.
+	</div>
 </div>
