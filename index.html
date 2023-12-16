@@ -4,7 +4,7 @@ title:
 subtitle:
 ---
 
-<div style="background-color: white; padding: 0 70px">
+<main style="background-color: white; padding: 0 70px">
 	<!-- component for the title -->
 
 	<head>
@@ -188,10 +188,33 @@ subtitle:
 
 	<h4>Movie Genre</h4>
 
-	{% include plots/pie_genre.html %} {% include
+  <div>
+    Let's look at the distribution of genres for both high and low budget
+    movies.
+  </div>
+
+	{% include plots/pie_genre.html %} 
+  
+<div>
+  The most popular genre are completely different for high and low budget. High budget top 5 genre are: Action, Adventure, Comedy, Science Fiction and Fantasy. 
+  Low budget top 5 genre are: Drama, Thriller, Comedy, Horror and Romance.
+  The biggest difference exists in Horrow where only 1.36% of high budget movies are in this genre compared to 11.01% for low budget movies.
+  Let's try and understand why this is the case.
+</div>
+  
+  {% include
 	plots/genre_influence_multiplier.html %}
 
+  <div>
+    We can explain the difference in the amount of horror films in low budget compared to high budget in two ways. 
+    First, the average multiplier for horror films is 11.01 for low budget and 2.37 for high budget. 
+    This means that low budget horror films are more profitable than high budget horror films. 
+  </div>
+
+
 	<h4>Movie Runtime</h4>
+
+	{% include plots/multiplier_by_runtime.html %}
 
 	<div>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -210,7 +233,10 @@ subtitle:
 		convallis.
 	</div>
 
-	<h4>Movie Actor Age</h4>
+	<h4>Movie Actor Age and Sex</h4>
+
+	{% include plots/multiplier_actors_age.html %} {% include
+	plots/multiplier_actors_male_ratio.html %}
 
 	<div>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -229,7 +255,6 @@ subtitle:
 		convallis.
 	</div>
 	<h2>What does our statistical analysis tell us?</h2>
-	{% include plots/example_chart_no_plotlyjs.html %}
 	<div>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
