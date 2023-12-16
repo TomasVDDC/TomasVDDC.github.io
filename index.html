@@ -4,7 +4,7 @@ title:
 subtitle:
 ---
 
-<main style="background-color: white; padding: 0 70px">
+<main style="background-color: white; padding: 60px 70px">
 	<!-- component for the title -->
 
 	<head>
@@ -23,6 +23,12 @@ subtitle:
 		h3 {
 			margin-top: 50px;
 			margin-bottom: 20px;
+		}
+
+    
+		h4 {
+			margin-top: 35px;
+			margin-bottom: 15px;
 		}
 
 		body {
@@ -206,31 +212,30 @@ subtitle:
 	plots/genre_influence_multiplier.html %}
 
   <div>
-    We can explain the difference in the amount of horror films in low budget compared to high budget in two ways. 
-    First, the average multiplier for horror films is 11.01 for low budget and 2.37 for high budget. 
-    This means that low budget horror films are more profitable than high budget horror films. 
+    We can explain the difference in the amount of horror films in low budget compared to high budget by looking at the multiplier difference. 
+    On average multiplier for horror films is 11.01 for low budget and 2.37 for high budget. 
+    This means that low budget horror films return on investement multiplier is at least 3x greater than any other genre of high budget films.
+    We can hypothesize that this financial incentive is what drives the difference in the amount of horror films in low budget compared to high budget.  
   </div>
 
 
 	<h4>Movie Runtime</h4>
 
+  <div>
+    The Movie Runtime is the duration of the movie in minutes. Let's explore the distribution of runtime for both high and low budget movies and it's relation to the multiplier.
+  </div>
+
 	{% include plots/multiplier_by_runtime.html %}
 
+
+
 	<div>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
-		pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
-		massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
-		risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
-		eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
-		consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
-		neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
-		tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
-		sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
-		et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
-		ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
-		nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
-		convallis.
+    The scatter plot compares the financial multiplier against the runtime for high (red) and low (blue) budget films.
+     Most films cluster around the 90-120 minute mark, reflecting a standard movie length. 
+     High-budget films show some outliers with high multipliers and longer runtimes, suggesting blockbuster potential for epic-scale movies. 
+     Low-budget films also have outliers with high multipliers, indicating potential sleeper hits. Both high and low-budget categories show a wide scatter, implying that runtime alone is not a strong predictor of financial success.
+      Overall, while there are high-performing movies at various lengths, the majority of films from both budget categories tend to have moderate runtimes and multipliers.
+      This suggests that factors other than runtime may be more critical in determining a movie's financial performance.
 	</div>
 
 	<h4>Movie Actor Age and Sex</h4>
@@ -239,21 +244,24 @@ subtitle:
 	plots/multiplier_actors_male_ratio.html %}
 
 	<div>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Vitae tempus quam
-		pellentesque nec nam aliquam sem et tortor. Urna et pharetra pharetra massa
-		massa ultricies. Sapien eget mi proin sed libero enim sed faucibus. Semper
-		risus in hendrerit gravida rutrum quisque non. Enim ut sem viverra aliquet
-		eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat. Nunc
-		consequat interdum varius sit amet mattis vulputate. Mattis rhoncus urna
-		neque viverra justo. Pellentesque pulvinar pellentesque habitant morbi
-		tristique senectus. Sed id semper risus in. Sodales neque sodales ut etiam
-		sit amet nisl purus. Morbi tincidunt augue interdum velit euismod. Et netus
-		et malesuada fames ac. Vitae suscipit tellus mauris a diam maecenas sed enim
-		ut. Ornare arcu dui vivamus arcu felis bibendum. Consequat semper viverra
-		nam libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra
-		convallis.
+		The first scatter plot explores the relationship between a film's financial multiplier and the ratio of actors below age 18. 
+    Films with varying proportions of young actors do not consistently yield higher or lower returns for either budget category. 
+    In the second scatter plot, examining the multiplier against the male ratio within the cast, a similar pattern emerges: there's no discernible trend that a higher proportion of male actors correlates with financial success. 
+    Both high and low-budget films are dispersed throughout the plots, suggesting that the age and gender composition of the cast have a minimal direct impact on a movie's return on investment. 
+    This data implies that casting decisions regarding age and gender are likely based on creative rather than financial considerations.
 	</div>
+
+  <h4>Initial Overall Perception</h4>
+
+  <div>
+    Low-budget films exhibit a greater variance in financial returns, indicating a higher risk but also the potential for significant profit, as seen in the broader spread of multipliers.
+    In contrast, high-budget movies show more predictable returns, suggesting a lower risk but also a lower relative profitability.
+    Genre preferences differ distinctly between the two, with low-budget films favoring genres like Horror that offer high returns at lower costs. 
+    Although movie runtime does not strongly correlate with financial success, both high and low-budget films typically adhere to standard feature-length times. 
+    This data implies that while high-budget films offer stability, low-budget films provide the allure of high rewards, driving diverse production strategies in the film industry. 
+    However we only looked at the data from a high level. Let's dive deeper into the data and see if we can find more insights. What are the most important features that drive the multiplier?
+  </div>
+
 	<h2>What does our statistical analysis tell us?</h2>
 	<div>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
