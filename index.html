@@ -64,11 +64,13 @@ subtitle:
   <div>
     <h2>Movie Bet: John and Bob's Challenge</h2>
 
-    <img
+    <!--     <img
       src="./assets/img/PubImage.png"
       alt="John and Bob"
       style="width: 100%; max-width: 800px; margin: 50px auto; display: block"
-    />
+    /> -->
+
+    {% include plots/multipliers.html %}
 
     <div class="scene">
       [Scene: A bustling pub. John, a suave and affluent man in his 30s, and
@@ -203,7 +205,7 @@ subtitle:
       movies.
     </div>
 
-    {% include plots/pie_genre_new.html %}
+    {% include plots/pie_genre.html %}
 
     <div>
       The most popular genre are completely different for high and low budget.
@@ -214,7 +216,7 @@ subtitle:
       Let's try and understand why this is the case.
     </div>
 
-    {% include plots/genre_influence_multiplier_new.html %}
+    {% include plots/genre_influence_multiplier.html %}
 
     <div>
       We can explain the difference in the amount of horror films in low budget
@@ -235,7 +237,7 @@ subtitle:
       relation to the multiplier.
     </div>
 
-    {% include plots/multiplier_by_runtime_new.html %}
+    {% include plots/multiplier_by_runtime.html %}
 
     <div>
       The scatter plot compares the financial multiplier against the runtime for
@@ -254,8 +256,8 @@ subtitle:
 
     <h4>Actor's age and sex</h4>
 
-    {% include plots/multiplier_actors_age_new.html %} {% include
-    plots/multiplier_actors_male_ratio_new.html %}
+    {% include plots/multiplier_actors_age.html %} {% include
+    plots/multiplier_actors_male_ratio.html %}
 
     <div>
       The first scatter plot explores the relationship between a film's
@@ -382,6 +384,7 @@ subtitle:
     features to obtain it. This could help John make the best choices for his
     movie.
   </div>
+
   {% include plots/optimal_table.html %}
 
   <div>
