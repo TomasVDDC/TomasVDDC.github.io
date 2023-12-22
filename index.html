@@ -339,19 +339,19 @@ subtitle:
     movies.
   </div>
 
-  {% include plots/predictors_high.html %}{% include plots/predictors_low.html
-  %}
+  <div style="margin-top: 30px">{% include plots/predictors_high.html %}</div>
+  {% include plots/predictors_low.html %}
 
-  <div>
+  <div style="margin-top: 30px">
     By keeping only features that exhibit clear positive or negative
     correlations with the output, that are in the 68% confidence interval and
     adding their interactions terms, we obtain the following most significant
     features.
   </div>
-  {% include plots/significance_high.html %}{% include
-  plots/significance_low.html %}
+  <div style="margin-top: 30px">{% include plots/significance_high.html %}</div>
 
-  <div>
+  <div style="margin-top: 30px">{% include plots/significance_low.html %}</div>
+  <div style="margin-top: 30px">
     The key features influencing the multiplier differ between low and high
     budget movies. This indicates that each category follows distinct guidelines
     for optimizing their multipliers. We can also see that high budget films
@@ -366,6 +366,7 @@ subtitle:
     for low budget movies. Knowing the significant features, we can now focus on
     optimizing them to achieve the highest possible multiplier.
   </div>
+
   <h2>How to maximize the movies multipliers in high and low budget movies?</h2>
   <div>
     Now that we know the important features for our producers, the next question
